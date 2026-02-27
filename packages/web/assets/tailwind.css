@@ -7,10 +7,14 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
+    --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-xl: 36rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --font-weight-bold: 700;
+    --radius-lg: 0.5rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -182,11 +186,17 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
   .mt-\[50px\] {
     margin-top: 50px;
   }
   .mr-5 {
     margin-right: calc(var(--spacing) * 5);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
   }
   .mb-\[15px\] {
     margin-bottom: 15px;
@@ -218,6 +228,9 @@
   .max-w-\[1200px\] {
     max-width: 1200px;
   }
+  .max-w-xl {
+    max-width: var(--container-xl);
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -244,6 +257,9 @@
   }
   .rounded-\[10px\] {
     border-radius: 10px;
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -275,6 +291,9 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
   .pb-\[5px\] {
     padding-bottom: 5px;
   }
@@ -284,6 +303,13 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-gray-300 {
+    color: var(--color-gray-300);
   }
   .text-white {
     color: var(--color-white);
@@ -375,6 +401,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -397,6 +427,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-font-weight: initial;
       --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
