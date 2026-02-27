@@ -7,6 +7,9 @@ members = [
 
 [workspace.dependencies]
 dioxus = { version = "0.7.1" }
+bon = { version = "3.9.0" }
+rootcause = { version = "0.12.1" }
+tap = { version = "1.0.1" }
 
 # workspace
 calculations = { path = "packages/calculations" }

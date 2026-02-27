@@ -4,3 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+bon =  { workspace = true }
+rootcause = { workspace = true }
+tap = { workspace = true }
