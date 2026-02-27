@@ -1,0 +1,16 @@
+[package]
+name = "warframe"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bon = "3.9.0"
+dioxus = { workspace = true, features = ["router", "fullstack"] }
+rootcause = "0.12.1"
+tap = "1.0.1"
+calculations = { workspace = true }
+
+[features]
+default = ["web"]
+web = ["dioxus/web"]
+server = ["dioxus/server"]
